@@ -1,0 +1,120 @@
+			=================================================================
+						Dict Category Data Type
+			=================================================================
+=>The purpose of Dict Category Data Type is that "To Store the Data in the form of (Key,Value) in single Object".
+=>The Data Type in Dict Category is 'dict'.
+=>Here dict is one of the Pre-Defined Class and Treated as Dict Category.
+=>To Store the Data in the form of (Key,Value)  in dict object, we must Use a symbolic notation called Curly Braces and (Key,Values) Must separated Comma.
+=>Syntax:	DictObject={Key1:Val1, Key2:Val2,.....,Key-n:Val-n}
+	=>Here Key1,Key2,....Key-n are Called Values of Key and They Must be Unique.
+	=>Here Val1,Val2,....,Val-n are Called Values of Value and they May or May not be Unique.
+=>An Object of Dict Maintains Insertion Order.
+=>On the Object of Dict, we can't Perform Indexing and Slicing Operations bcoz Values of Key Itself acts as Indices.
+=>An Object of Dict belongs to Mutable bcoz we are able Update the Value of Value  by passing Existing Value of Key.
+=>In (Key,value) , The Values of Key are Immutable and Values of Value are Mutable.
+=>W.r.t Dict Class, we can create Two Types of Dict objects. They are
+					1. Empty Dict
+					2. Non-Empty Dict
+--------------------------------------------------------
+1. Empty Dict
+--------------------------------------------------------
+=>An Empty Dict is One  which does not contain any (Key,Value) and whose length is 0.
+=>Syntax-1:   DictObj={}
+=>Syntax-2:	DictObj=dict()
+--------------------------------------------------------
+2. Non-Empty Dict
+--------------------------------------------------------
+=>A Non-Empty Dict is One  which contains  (Key,Value)  and whose length is >0.
+=>Syntax:	DictObject={Key1:Val1, Key2:Val2,.....,Key-n:Val-n}
+****************************************************************
+Syntax for Adding (Key,Value) to Empty / Non-Empty Dict Object--Most Imp
+****************************************************************
+			DictObj[Key1]=Val1
+			DictObj[Key2]=Val2
+			--------------------------
+			DictObj[Key-n]=Val-n
+=>Here Key1,Key2,....Key-n are Called Values of Key and They Must be Unique.
+=>Here Val1,Val2,....,Val-n are Called Values of Value and they May or May not be Unique.
+****************************************************************				
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+Examples
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+>>> d1={10:1.2,20:3.4,30:1.2,40:3.7}
+>>> print(d1,type(d1),id(d1))
+{10: 1.2, 20: 3.4, 30: 1.2, 40: 3.7} <class 'dict'> 1989841356928
+>>>
+>>> d2={1:"Python",2:'C++',3:"C",4:"Java"}
+>>> print(d2,type(d2),id(d2))
+{1: 'Python', 2: 'C++', 3: 'C', 4: 'Java'} <class 'dict'> 1989809452224
+>>>
+>>> d3={"Python":"RS","C":"DR","C++":"StUP","Java":"JG"}
+>>> print(d3,type(d3),id(d3))
+{'Python': 'RS', 'C': 'DR', 'C++': 'StUP', 'Java': 'JG'} <class 'dict'> 1989809452032
+--------------------------------------------------------------
+>>> d1={10:1.2,20:3.4,30:1.2,40:3.7}
+>>> print(d1,type(d1),id(d1))
+{10: 1.2, 20: 3.4, 30: 1.2, 40: 3.7} <class 'dict'> 1989842083264
+>>> d1[0]----------------------KeyError: 0
+>>> d1[10]
+1.2
+>>> d1[40]
+3.7
+>>> d1[30]
+1.2
+>>> d1[20]
+3.4
+----------------------------------------------------
+>>> d1={10:1.2,20:3.4,30:1.2,40:3.7}
+>>> print(d1,type(d1),id(d1))
+{10: 1.2, 20: 3.4, 30: 1.2, 40: 3.7} <class 'dict'> 1989842079424
+>>>
+>>> d1[10]
+1.2
+>>> d1[10]=2.2
+>>> print(d1,type(d1),id(d1))
+{10: 2.2, 20: 3.4, 30: 1.2, 40: 3.7} <class 'dict'> 1989842079424
+>>> d1[40]=d1[40]+1.3
+>>> print(d1,type(d1),id(d1))
+{10: 2.2, 20: 3.4, 30: 1.2, 40: 5.0} <class 'dict'> 1989842079424
+---------------------------------------------
+Most IMP
+---------------------------------------------
+>>> d1={10:1.2,10:2.3,10:3.3,10:4.4}
+>>> print(d1,type(d1))
+{10: 4.4} <class 'dict'>
+----------------------------------------------------
+>>> d1={}
+>>> print(d1,type(d1))
+{} <class 'dict'>
+>>> len(d1)
+0
+>>> d2=dict()
+>>> print(d2,type(d2))
+{} <class 'dict'>
+>>> len(d2)
+0
+--------------------------------------------
+>>> d1={10:1.2,20:3.4,30:1.2,40:3.7}
+>>> print(d1,type(d1))
+{10: 1.2, 20: 3.4, 30: 1.2, 40: 3.7} <class 'dict'>
+>>> len(d1)
+4
+--------------------------------------------------
+>>> d1={}
+>>> print(d1,type(d1),id(d1))
+{} <class 'dict'> 1989842049600
+>>>
+>>> d1[100]=10.2  # Inserted Entry
+>>> d1[200]=11.5 # Inserted Entry
+>>> d1[300]=12.5 # Inserted Entry
+>>>
+>>> print(d1,type(d1),id(d1))
+{100: 10.2, 200: 11.5, 300: 12.5} <class 'dict'> 1989842049600
+>>> d1[400]=10.5  # Inserted Entry
+>>> print(d1,type(d1),id(d1))
+{100: 10.2, 200: 11.5, 300: 12.5, 400: 10.5} <class 'dict'> 1989842049600
+>>>
+>>> d1[100]=15.5  # Modified Entry
+>>> print(d1,type(d1),id(d1))
+{100: 15.5, 200: 11.5, 300: 12.5, 400: 10.5} <class 'dict'> 1989842049600
+--------------------------------------------------------------------------------------------------------------------------------------------------------
